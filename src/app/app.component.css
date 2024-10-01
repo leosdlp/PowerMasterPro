@@ -1,0 +1,31 @@
+.row{
+  text-align: center;
+  place-content: center;
+  gap:6rem;
+}
+
+body{
+  background-color: #fff;
+}
+
+a{
+  border-bottom: 1px solid white;;
+  text-decoration: none;
+  color: #313131;
+  padding:1rem;
+  transition: .2s;
+}
+a:hover{
+  color:rgb(136, 54, 54);
+  transform: translate(0px, -.2rem);
+  border-bottom: 1px solid rgb(136, 54, 54);
+}
+
+.active{
+  color:rgb(136, 54, 54);
+  border-bottom: 1px solid rgb(136, 54, 54);
+}
+
+.cont-menu{
+  width:100%;
+}

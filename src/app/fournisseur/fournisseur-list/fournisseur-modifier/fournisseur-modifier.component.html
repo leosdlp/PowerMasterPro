@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="fournisseurForm" (ngSubmit)="modifierFournisseur()">
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+          <label for="id" class="col-2">ID :</label>
+          <input type="text" id="id" formControlName="id" class="col-4" placeholder="{{ fournisseurId}}" readonly>
+        </div>
+
+        <div class="row">
+          <label for="nom" class="col-2">Nouveau nom :</label>
+          <input type="text" id="nom" formControlName="nom" class="col-4" placeholder="{{ fournisseurName}}" [(ngModel)]="newName">
+        </div>
+
+        <div class="buttons row">
+          <div class="col-2">
+            <button routerLink="/fournisseur-list" routerLinkActive="active" class="col-12">Retour</button>
+          </div>
+          <div class="col-2">
+            <button class="col-12" (click)="updateFournisseur()">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

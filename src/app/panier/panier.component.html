@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="row">
+    <h1>Panier</h1>
+    <div *ngFor="let produit of panierList | keyvalue" class="col-12">
+      <div class="row">
+        <div class="col-2">
+          <div class="row infos">
+            <div class="col-12">
+              <p class="col-12">{{ produit.value.nom }} ({{ produit.value.nombre }})</p>
+              <p class="col-12">{{ (produit.value.prix * produit.value.nombre).toFixed(2) }} €</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row buttons">
+            <button (click)="supprimerPanier(produit.value)" class="col-2">-</button>
+            <button (click)="ajouterPanier(produit.value)" class="col-2">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="col-12 total">Total : {{ this.totalPanier.toFixed(2) }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <button routerLink="/produit-commander" routerLinkActive="active" class="col-2 retour">Retour</button>
+    <button class="col-2 commander" (click)="commander()">Commander</button>
+  </div>
+</div>

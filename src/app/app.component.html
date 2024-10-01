@@ -1,0 +1,18 @@
+<body>
+    <div class="row cont-menu">
+      <div class="col-12">
+        <div class="row">
+          <a class="col-1" routerLink="/" [routerLinkActive]="['active']" [class.active]="isHomePage()" (click)="ngOnInit()">Accueil</a>
+          <a class="col-1" routerLink="/produit-list" routerLinkActive="active" *ngIf="isAdmin()" (click)="ngOnInit()">Stock</a>
+          <a class="col-1" routerLink="/produit-commander" routerLinkActive="active" (click)="ngOnInit()" *ngIf="!isAdmin()">Commander</a>
+          <a class="col-1" routerLink="/fournisseur-list" routerLinkActive="active" *ngIf="isAdmin()" (click)="ngOnInit();">Fournisseur</a>
+          <a class="col-1" routerLink="/panier" routerLinkActive="active" (click)="ngOnInit()" *ngIf="!isAdmin()">Panier</a>
+          <a class="col-1" routerLink="/commandes" routerLinkActive="active"*ngIf="isAdmin()" (click)="ngOnInit()">Commandes</a>
+          <a class="col-1" routerLink="/avis-list" routerLinkActive="active" *ngIf="isAdmin()" (click)="ngOnInit()">Avis</a>
+          <a class="col-1" routerLink="/avis" routerLinkActive="active" *ngIf="!isAdmin()" (click)="ngOnInit()">Avis</a>
+          <a class="col-1" [routerLink]="isLoggedIn() ? '/profil' : '/connexion'" routerLinkActive="active" (click)="ngOnInit()">{{ isLoggedIn() ? 'Profil' : 'Connexion' }}</a>
+        </div>
+      </div>
+    </div>
+  <router-outlet></router-outlet>
+</body>

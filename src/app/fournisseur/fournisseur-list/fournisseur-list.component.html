@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Liste des fournisseurs</h1>
+  <div class="row">
+    <div class="col-10">
+      <div class="row">
+        <button routerLink="/fournisseur" routerLinkActive="active" class="col-2 ajout">Ajouter un fournisseur</button>
+        <input type="text" [(ngModel)]="rechercheFournisseur" (input)="filtrerFournisseurs()" placeholder="Rechercher un fournisseur" class="col-5">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let fournisseur of fournisseurs" class="col-3">
+      <div class="col-12">
+        <h2>{{ fournisseur.nom }}</h2>
+        <div class="infos row">
+          <p class="col-3">Id : {{ fournisseur.id }}</p>
+        </div>
+        <div class="buttons row">
+          <button (click)="supprimerFournisseur(fournisseur.id)" class="col-4">Supprimer</button>
+          <button (click)="modifierFournisseur(fournisseur.id)" class="col-4">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

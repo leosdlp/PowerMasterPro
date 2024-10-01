@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h1>Créer un produit</h1>
+      <form [formGroup]="produitForm" (ngSubmit)="ajouterProduit()">
+
+        <div class="row">
+          <label for="nom" class="col-4">Nom :</label>
+          <input type="text" id="nom" formControlName="nom" class="col-6">
+        </div>
+
+        <div class="row">
+          <label for="type" class="col-4">Type :</label>
+          <select id="type" formControlName="type" class="col-6">
+            <option value=""></option>
+            <option value="costume">Costume</option>
+            <option value="blazer">Blazer</option>
+            <option value="t-shirt">T-shirt</option>
+            <option value="manteau">Manteau</option>
+            <option value="veste">Veste</option>
+            <option value="jean">Jean</option>
+            <option value="pull">Pull</option>
+            <option value="sweat">Sweat</option>
+            <option value="pantalon">Pantalon</option>
+            <option value="short">Short</option>
+            <option value="sous-vêtement">Sous-vêtement</option>
+            <option value="pyjama">Pyjama</option>
+            <option value="maillot-de-bain">Maillot de bain</option>
+            <option value="vetement-sport">Vêtement de sport</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="genre" class="col-4">Genre :</label>
+          <select id="genre" formControlName="genre" class="col-6">
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="taille" class="col-4">Taille :</label>
+          <select id="taille" formControlName="taille" class="col-6">
+            <option value="xxs">XXS</option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="prix" class="col-4">Prix :</label>
+          <input type="number" id="prix" formControlName="prix" step="0.01" class="col-6">
+        </div>
+
+        <div class="row">
+          <label for="etat" class="col-4">État :</label>
+          <select id="etat" formControlName="etat" class="col-6">
+            <option value="neuf-avec-etiquette">Neuf avec étiquette</option>
+            <option value="neuf-sans-etiquette">Neuf sans étiquette</option>
+            <option value="tres-bon-etat">Très bon état</option>
+            <option value="bon-etat">Bon état</option>
+            <option value="etat-correct">État correct</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="fournisseur" class="col-4">Fournisseur :</label>
+          <select id="fournisseur" formControlName="fournisseur" class="col-6">
+            <option *ngFor="let fournisseur of fournisseurs" value="{{fournisseur.nom}}">
+              {{ fournisseur.nom }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="nombre" class="col-4">En stock :</label>
+          <input type="number" id="nombre" formControlName="nombre" class="col-6">
+        </div>
+
+        <div class="buttons row">
+          <div class="col-4">
+            <button routerLink="/produit-list" routerLinkActive="active" class="col-12">Retour</button>
+          </div>
+          <div class="col-4">
+            <button type="submit" class="col-12">Créer</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

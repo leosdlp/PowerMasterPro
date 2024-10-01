@@ -1,0 +1,19 @@
+.row{
+  place-content: center;
+  margin-top: 1rem;
+}
+
+.col-8{
+  place-content: center;
+  gap:1rem !important;
+}
+
+input, select{
+  border-radius: .5rem;
+  border:1px solid grey;
+}
+
+button{
+  border:1px solid grey;
+  border-radius: .5rem;
+}

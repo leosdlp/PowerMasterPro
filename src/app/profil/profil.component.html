@@ -1,0 +1,33 @@
+<div class="container" *ngIf="isLoggedIn()">
+  <div class="row">
+    <div class="col-12 contProfil">
+      <div class="row">
+        <h1 class="col-5">{{username}}</h1>
+      </div>
+      <form [formGroup]="userForm" (ngSubmit)="updateUser()" *ngIf="isAdmin()">
+        <div>
+          <label for="username">Nouveau pseudo:</label>
+          <input formControlName="username" type="text" [(ngModel)]="newUsername" [placeholder]="this.username">
+        </div>
+        <div>
+          <label for="password">Nouveau mot de passe:</label>
+          <input formControlName="password" type="password" [(ngModel)]="newPassword" [placeholder]="this.password">
+        </div>
+        <div>
+          <label for="password">Confirmez le mot de passe:</label>
+          <input formControlName="password" type="password" [(ngModel)]="newConfirmPassword">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input formControlName="email" type="email" [(ngModel)]="newEmail" [placeholder]="this.email">
+        </div>
+        <button (click)="updateUser()">Update User</button>
+      </form>
+    </div>
+    <div class="row deco">
+      <button (click)="deleteUser()" class="col-2" *ngIf="isAdmin()">Supprimer mon compte</button>
+      <button (click)="deconnect()" class="col-2">Déconnexion</button>
+    </div>
+  </div>
+</div>
+

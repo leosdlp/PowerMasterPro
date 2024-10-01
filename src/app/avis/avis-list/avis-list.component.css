@@ -1,0 +1,15 @@
+.cont-avis{
+  background-color: #f3f2f2;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid grey;
+}
+
+.description {
+  overflow: auto;
+}
+
+h1{
+  color: rgb(223, 109, 44);
+}

@@ -1,0 +1,30 @@
+.container
+{
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #fff;
+}
+
+.row{
+  place-content: center;
+  gap:.5rem;
+  margin-top: 1rem;
+}
+
+.buttons{
+  margin-top: 2rem;
+}
+
+button{
+  border-radius: .5rem;
+  border:1px solid grey;
+}
+
+input, select{
+  border-radius: .5rem;
+  border:1px solid grey;
+}
+
+h1{
+  color:rgb(223, 109, 44);
+}

@@ -1,0 +1,36 @@
+h1{
+  text-align: center;
+  color:rgb(223, 109, 44);
+}
+
+.row{
+  place-content: center;
+  gap:1rem;
+  margin-top:1rem;
+}
+
+input{
+  border-radius: 1rem;
+  border:1px solid grey;
+}
+
+input:hover{
+  border:1px solid black;
+}
+
+button{
+  border-radius: 1rem;
+  border:1px solid grey;
+  transition:.15s;
+  background-color: #fff;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+.connecter, .inscrire{
+  border:0;
+  background-color: rgb(223, 109, 44);
+  color:#fff;
+}

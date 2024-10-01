@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Créer un avis</h1>
+      <div class="row">
+        <label for="description" class="col-2">Description :</label>
+        <input type="text" id="description" class="col-6" [(ngModel)]="description">
+      </div>
+      <div class="row">
+        <label for="description" class="col-2">Étoile :</label>
+        <select id="type" [(ngModel)]="etoile" class="col-1">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="buttons row">
+        <div class="col-4">
+          <button type="submit" class="col-4" (click)="addAvis()">Créer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngIf="connexion">
+      <h1>Connexion</h1>
+      <div class="row">
+        <input type="text" placeholder="Nom d'utilisateur" [(ngModel)]="loginUsername" class="col-3"/>
+      </div>
+      <div class="row">
+        <input type="password" placeholder="Mot de passe" [(ngModel)]="loginPassword" class="col-3"/>
+      </div>
+      <div class="row">
+        <button routerLinkActive="active" class="col-2" (click)="InscriptionForm()">Créer un compte</button>
+        <button (click)="login()" class="col-2 connecter">Se connecter</button>
+      </div>
+    </div>
+    <div class="col-12" *ngIf="inscription">
+      <h1>Inscription</h1>
+      <div class="row">
+        <input type="text" placeholder="Nom d'utilisateur" [(ngModel)]="username" class="col-3"/>
+      </div>
+      <div class="row">
+        <input type="email" placeholder="Email" [(ngModel)]="email" class="col-3"/>
+      </div>
+      <div class="row">
+        <input type="password" placeholder="Mot de passe" [(ngModel)]="password" class="col-3"/>
+      </div>
+      <div class="row">
+        <input type="password" placeholder="Vérifier le mot de passe" [(ngModel)]="passwordVerif" class="col-3"/>
+      </div>
+      <div class="row">
+        <button routerLinkActive="active" class="col-2" (click)="connexionForm()">Me connecter</button>
+        <button (click)="register()" class="col-2 inscrire">S'inscrire</button>
+      </div>
+    </div>
+  </div>
+</div>

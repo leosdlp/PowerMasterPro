@@ -1,0 +1,57 @@
+.row{
+  place-content: center;
+}
+
+h1{
+  text-align: center;
+  color:rgb(223, 109, 44);
+}
+
+button{
+  border:1px solid grey;
+  border-radius: 1rem;
+  transition: .15s;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+.modif{
+  color:#fff;
+  background-color: rgb(223, 109, 44);
+  border:0;
+}
+
+.row{
+  margin-top:1rem;
+  gap:1rem;
+}
+
+input{
+  border-radius:.5rem;
+  border:1px solid grey;
+  color:rgb(223, 109, 44);
+}
+
+input:hover{
+  border:1px solid rgb(223, 109, 44);
+}
+
+.deco{
+  margin-top:2rem;
+}
+
+.infos{
+  border:1px solid grey;
+  border-radius: .5rem;
+  place-content: center;
+  padding:1rem;
+  align-items: center;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.center{
+  text-align: center;
+}
